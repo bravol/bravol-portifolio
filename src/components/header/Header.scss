@@ -1,0 +1,79 @@
+header {
+  height: fit-content;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* ...CTA.... */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Header socials */
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+/* a small line down the socials */
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+/* image Me */
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 20rem;
+  height: 25rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 1rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* Scroll Down */
+
+.scroll__down {
+  position: absolute;
+  right: -12rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* media queries...MEDIA DEVICES */
+/* TABLET(MEDIUM DEVICES */
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 68vh;
+  }
+}
+/* SMALL DEVICES */
+@media screen and (max-width: 600px) {
+  .container {
+    height: 100vh;
+  }
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
